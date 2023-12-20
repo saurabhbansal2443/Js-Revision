@@ -60,18 +60,32 @@ function bakeSandwich(sandwich) {
     return myPromise;
 }
 
-cuttingBread(raw).then(function (bread) {
-    console.log(bread)
-    return addSauces(bread);
-}).then(function (base) {
-    console.log(base)
-    return addTopings(base)
-}).then(function (sandwich) {
-    console.log(sandwich)
-    return bakeSandwich(sandwich)
-}).then(function (readySandwich) {
-    console.log(readySandwich)
-}).catch(function (error) {
-    console.log(error)
-})
+// cuttingBread(raw).then(function (bread) {
+//     console.log(bread)
+//     return addSauces(bread);
+// }).then(function (base) {
+//     console.log(base)
+//     return addTopings(base)
+// }).then(function (sandwich) {
+//     console.log(sandwich)
+//     return bakeSandwich(sandwich)
+// }).then(function (readySandwich) {
+//     console.log(readySandwich)
+// }).catch(function (error) {
+//     console.log(error)
+// })
 
+
+ async function makeSandwich(){
+    let bread = await cuttingBread(raw);
+    console.log(bread);
+    let base = await addSauces(bread);
+    console.log(base);
+    let sandwich = await addTopings(base);
+    console.log(sandwich);
+    let readySandwich = await bakeSandwich(sandwich);
+    console.log(readySandwich);  
+}
+
+
+makeSandwich();
