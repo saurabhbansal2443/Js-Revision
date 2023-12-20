@@ -2,7 +2,6 @@ let raw = "bread";
 
 function cuttingBread(raw, callback1) {
     setTimeout(function () {
-        // console.log("Bread is cuted ");
         let bread = raw;
         callback1(bread);
     }, 2000);
@@ -30,8 +29,8 @@ function bakeSandwich(sandwich, callback4) {
 }
 
 
-cuttingBread(raw, function (bread) { // first process is called with raw material 
-    console.log(bread);
+cuttingBread(raw, function (bread) { 
+    console.log(bread);              
     addsauces(bread, function (base) {
         console.log(base);
         addTopings(base, function (sandwich) {
