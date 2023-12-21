@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul style="border: 2px solid red;">
+        <li  class="laptop">laptop</li>
+        <li class="Tv">Tv</li>
+        <li class="clothes">clothes</li>
+    </ul>
+    
+</body>
+<script>
+    let ul = document.querySelector("ul");
+
+    ul.addEventListener("click",function(event){
+        console.log(event.target);
+    })
+</script>
+</html>
