@@ -43,19 +43,35 @@ let arr = [1, 99, 3, 4, 5, 6, 7];
 
 // console.log(filteredArray)
 
-let sum = arr.reduce(function (acc, ele, idx, array) {
-    if (acc < ele) {
-        acc = ele ;
-    }
+// let sum = arr.reduce(function (acc, ele, idx, array) {
+//     if (acc < ele) {
+//         acc = ele ;
+//     }
 
-    return acc ;
-})
+//     return acc ;
+// })
 
-console.log(sum);
+// console.log(sum);
+
+// let obj = {
+//     name : "saurabh",
+//     age : 23 ,
+//     phoneNumber : 987654321,
+//     address :{
+//         city : "delhi"
+//     }
+
+// }
+
+// let {age , name  , phoneNumber , address} = obj
+
+// console.table([age , name  , phoneNumber])
 
 
 
-
+(function(){
+    console.log("Greet is called ")
+})()
 
 
 
