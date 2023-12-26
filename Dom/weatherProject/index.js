@@ -5,7 +5,16 @@ let city = document.querySelector("#city");
 let humidity = document.querySelector("#humidity");
 let windspeed = document.querySelector("#windSp");
 let cond = document.querySelector("#condition");
-let logo = document.querySelector("#logo")
+let logo = document.querySelector("#logo");
+
+let inputBar = document.querySelector("#inputTag")
+let searchBtn  = document.querySelector("#search-addon");
+
+searchBtn.addEventListener("click",function(){
+    let city = inputBar.value;
+    inputBar.value="";
+    fetchData(city);
+})
 
 async function fetchData(city){
    let data = await fetch(`http://api.weatherapi.com/v1/current.json?key=${key}&q=${city}&aqi=no`)
@@ -16,7 +25,7 @@ async function fetchData(city){
 }
 
 
-fetchData("new delhi");
+
 
 
 function screenUpdate(obj){
