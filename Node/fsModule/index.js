@@ -17,3 +17,5 @@ import fs from 'fs';
 // fs.appendFileSync("./file1.txt" , "I am the content which is added ");
 
 fs.writeFileSync("./file1.txt","i am updated content ")
+
+fs.renameSync("./file1.txt" , "./fileOne.txt")
