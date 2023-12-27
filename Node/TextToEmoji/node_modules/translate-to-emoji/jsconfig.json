@@ -1,0 +1,14 @@
+{
+	"compileOnSave": true,
+	"compilerOptions": {
+		"allowJs": true,
+		"checkJs": true,
+		"declaration": true,
+		"declarationDir": ".",
+		"emitDeclarationOnly": true,
+		"lib": ["DOM", "ES2022", "ESNext"],
+		"noEmit": false
+	},
+	"exclude": [],
+	"include": ["./index.js"]
+}

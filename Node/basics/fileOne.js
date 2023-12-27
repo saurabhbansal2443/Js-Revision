@@ -1,3 +1,7 @@
-let str = "I am data of file one";
+export let arpit = "gud";
+export let rajat = "smoker";
+export let raja = "donkey";
 
-export default str ;
+let obj = {}
+
+export default obj ;

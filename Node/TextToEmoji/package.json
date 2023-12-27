@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "translate-to-emoji": "^2.2.0"
+  },
+  "type":"module"
+}

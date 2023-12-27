@@ -1,3 +1,5 @@
-import str from "./fileOne.js";
+// import obj2 , {arpit , rajat , raja } from "./fileOne.js";
 
-console.log(str);
+import {} from "./fileOne.js";
+
+console.log(lakshay);
