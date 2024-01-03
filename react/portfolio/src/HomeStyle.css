@@ -1,0 +1,62 @@
+
+.mainContainer{
+    height: 95vh;
+    width: 100%;
+    background-image: url("../assets/BgImage.jpeg");
+    display: flex;
+
+}
+
+.textPart{
+    border: 2px solid red;
+    height: 70%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 10%;
+    margin-left: 20%;
+}
+.avatarPart{
+    /* border: 2px solid red; */
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar{
+    border-radius: 50%;
+    width: 80%;
+    height: 60%;
+    margin-bottom: 40%;
+}
+
+
+
+.textIn{
+     /* border: 2px solid red;  */
+    font-weight: 900;
+    font-size: 5rem;
+}
+.aboutMe{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.socialCircle{
+    /* border: 2px solid red; */
+    height: 8%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo{
+    height: 50%;
+    width: 20%;
+}
+
