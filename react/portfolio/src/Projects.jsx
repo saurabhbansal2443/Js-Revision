@@ -1,16 +1,17 @@
 import React from 'react'
 import ProjectCard from './ProjectCard'
 
-const Projects = () => {
-  return (
-    <div>
-      <ProjectCard></ProjectCard>
-      <ProjectCard></ProjectCard>
-      <ProjectCard></ProjectCard>
-      <ProjectCard></ProjectCard>
-      <ProjectCard></ProjectCard>
-      <ProjectCard></ProjectCard>
+import projectsArray from '../assets/ProjectInfo'
 
+const Projects = () => {
+
+  return (
+    <div style={{display:"flex", justifyContent:"space-around" , flexWrap:"wrap" , marginTop:"1%"}}>
+      <ProjectCard obj={projectsArray[0]}></ProjectCard>
+      <ProjectCard obj={projectsArray[1]}></ProjectCard>
+      <ProjectCard obj={projectsArray[2]}></ProjectCard>
+      <ProjectCard obj={projectsArray[3]}></ProjectCard>
+      <ProjectCard obj={projectsArray[4]}></ProjectCard>
     </div>
   )
 }

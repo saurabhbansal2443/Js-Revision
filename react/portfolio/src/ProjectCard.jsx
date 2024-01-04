@@ -1,23 +1,19 @@
 import React from 'react'
 
 
-const ProjectCard = () => {
+const ProjectCard = ({obj}) => {
+    
   return (
     <div>
         <div className="card" style={{width : "18rem"}}>
-  <img className="card-img-top" src="..." alt="Card image cap"/>
+  <img className="card-img-top" src={obj.imageLink} alt="Card image cap"/>
   <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 className="card-title">{obj.projectTittle}</h5>
+    <p className="card-text">{obj.projectDes}</p>
   </div>
-  <ul className="list-group list-group-flush">
-    <li className="list-group-item">Cras justo odio</li>
-    <li className="list-group-item">Dapibus ac facilisis in</li>
-    <li className="list-group-item">Vestibulum at eros</li>
-  </ul>
   <div className="card-body">
-    <a href="#" className="card-link">Card link</a>
-    <a href="#" className="card-link">Another link</a>
+    <a href={obj.github} className="card-link">Github Link</a>
+    <a href={obj.projectLink} className="card-link">Project link</a>
   </div>
 </div>
     </div>
