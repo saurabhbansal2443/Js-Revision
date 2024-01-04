@@ -1,17 +1,17 @@
 import React from 'react';
 import "./HomeStyle.css"
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 const Home = () => {
   return (
     <div className='mainContainer'>
-      <div className="textPart" style={{fontSize:"2rem" , fontWeight:"500"}}>
-        <main class="container" style={{ height:"25%"}}>
+      <div className="textPart" style={{ fontSize: "2rem", fontWeight: "500" }}>
+        <main class="container" style={{ height: "25%" }}>
           <p>Hello 👋 I'm <br />
-          Saurabh Bansal</p>
+            Saurabh Bansal</p>
           <section class="animation">
             <div class="first"><div> Youtuber </div></div>
             <div class="second"><div>Web Developer</div></div>
-            <div class="third"><div>Systems Engineer</div></div>
+            <div class="third"><div>Mentor </div></div>
           </section>
         </main>
         <div className="aboutMe">

@@ -1,8 +1,17 @@
 import React from 'react'
+import ProjectCard from './ProjectCard'
 
 const Projects = () => {
   return (
-    <div>Projects</div>
+    <div>
+      <ProjectCard></ProjectCard>
+      <ProjectCard></ProjectCard>
+      <ProjectCard></ProjectCard>
+      <ProjectCard></ProjectCard>
+      <ProjectCard></ProjectCard>
+      <ProjectCard></ProjectCard>
+
+    </div>
   )
 }
 
