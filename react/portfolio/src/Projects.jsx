@@ -7,11 +7,11 @@ const Projects = () => {
 
   return (
     <div style={{display:"flex", justifyContent:"space-around" , flexWrap:"wrap" , marginTop:"1%"}}>
-      <ProjectCard obj={projectsArray[0]}></ProjectCard>
-      <ProjectCard obj={projectsArray[1]}></ProjectCard>
-      <ProjectCard obj={projectsArray[2]}></ProjectCard>
-      <ProjectCard obj={projectsArray[3]}></ProjectCard>
-      <ProjectCard obj={projectsArray[4]}></ProjectCard>
+     {
+       projectsArray.map((detailsObj)=>{
+        return <ProjectCard obj={detailsObj}></ProjectCard>
+       })
+     }
     </div>
   )
 }

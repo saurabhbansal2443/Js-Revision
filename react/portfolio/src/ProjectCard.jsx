@@ -5,8 +5,8 @@ const ProjectCard = ({obj}) => {
     
   return (
     <div>
-        <div className="card" style={{width : "18rem"}}>
-  <img className="card-img-top" src={obj.imageLink} alt="Card image cap"/>
+        <div className="card" style={{width : "18rem" , height:"25rem" , overflow:"scroll" , marginBottom:"7%"}}>
+  <img className="card-img-top" style={{height:"50%"}} src={obj.imageLink} alt="Card image cap"/>
   <div className="card-body">
     <h5 className="card-title">{obj.projectTittle}</h5>
     <p className="card-text">{obj.projectDes}</p>
