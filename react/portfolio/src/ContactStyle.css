@@ -7,7 +7,7 @@ ul {
 
 .sec-title {
     position: relative;
-    padding-bottom: 40px
+    /* padding-bottom: 40px */
 }
 
 .sec-title .title {
@@ -46,8 +46,7 @@ ul {
 
 .contact-page-section {
     position: relative;
-    padding-top: 110px;
-    padding-bottom: 110px;
+    
 }
 
 .contact-page-section .inner-container {

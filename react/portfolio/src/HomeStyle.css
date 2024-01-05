@@ -5,7 +5,7 @@ p {
   text-shadow: 0 0 7px rgba(23, 23, 23, 0.3), 0 0 3px rgba(255, 252, 252, 0.3);
 }
 .container {
-  color: #000000;
+  /* color: #000000; */
   font-size: 2.26rem;
   text-transform: uppercase;
   height: 100vh;
@@ -58,7 +58,7 @@ p {
 .mainContainer{
     height: 95vh;
     width: 100%;
-    background-image: url("../assets/BgImage.jpeg");
+    /* background-image: url("../assets/BgImage.jpeg"); */
     display: flex;
 
 }
@@ -121,13 +121,14 @@ p {
     width: 25%;
 }
 .logo{
-    height: 100%;
-    width: 100%;
+    height: 150%;
+    width: 70%;
+    border-radius: 50%;
 }
 
 .glow {
     font-size: 25px;
-    color: #fff;
+     color: #fff; 
     text-align: center;
     animation: glow 1s ease-in-out infinite alternate;
   }

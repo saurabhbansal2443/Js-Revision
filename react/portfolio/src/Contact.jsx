@@ -1,16 +1,16 @@
 import React from 'react'
 import "./ContactStyle.css"
 
-const Contact = () => {
+const Contact = ({theme}) => {
   return (
-    <div>
-      <section className="contact-page-section">
-        <div className="container">
+    <div  style={{backgroundColor:theme=="light"?"white":"black" , color:theme=="light"?"black":"white" }}>
+      <section className="contact-page-section my-0">
+        <div className="container my-0">
           <div className="sec-title">
             <div className="title">Contact Us</div>
             <h2>Let's Get in Touch.</h2>
           </div>
-          <div className="inner-container">
+          <div className="inner-container my-0">
             <div className="row clearfix">
 
 
@@ -56,14 +56,7 @@ const Contact = () => {
                     <li><i className="far fa-envelope"></i>example@test</li>
                     <li><i className="fas fa-phone"></i>1-234-567-890 <br /> 1-234-567-890</li>
                   </ul>
-                  <ul className="social-icon-four">
-                    <li className="follow">Follow on: </li>
-                    <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i className="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i className="fab fa-google-plus-g"></i></a></li>
-                    <li><a href="#"><i className="fab fa-dribbble"></i></a></li>
-                    <li><a href="#"><i className="fab fa-pinterest-p"></i></a></li>
-                  </ul>
+                 
                 </div>
               </div>
 

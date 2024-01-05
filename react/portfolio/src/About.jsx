@@ -1,8 +1,8 @@
 import React from 'react'
 
-const About = () => {
+const About = ({theme}) => {
   return (
-    <div> 
+    <div  style={{backgroundColor:theme=="light"?"white":"black" , color:theme=="light"?"black":"white" }}> 
       
 <section className="py-3 py-md-5">
   <div className="container">

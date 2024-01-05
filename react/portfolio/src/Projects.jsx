@@ -5,13 +5,13 @@ import { v4 as uuidv4 } from 'uuid';
 
 import projectsArray from '../assets/ProjectInfo'
 
-const Projects = () => {
-
+const Projects = ({theme}) => {
+  console.log(theme)
   return (
-    <div style={{display:"flex", justifyContent:"space-around" , flexWrap:"wrap" , marginTop:"1%"}}>
+    <div style={{display:"flex", justifyContent:"space-around" , flexWrap:"wrap" , paddingTop:"1%", backgroundColor:theme=="light"?"white":"black" ,minHeight:"100vh"}}>
      {
        projectsArray.map((detailsObj  )=>{
-        return <ProjectCard key ={uuidv4()} obj={detailsObj}></ProjectCard>
+        return <ProjectCard theme={theme} key ={uuidv4()} obj={detailsObj}></ProjectCard>
        })
      }
     </div>

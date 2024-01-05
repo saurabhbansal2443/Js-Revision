@@ -13,10 +13,10 @@ const App = () => {
     <>
     <Navbar themeObj = {{theme , setTheme }}></Navbar>
     <Routes>
-      <Route path="/" element={<Home></Home>} ></Route>
-      <Route path="/project" element={<Projects></Projects>}></Route>
-      <Route path="/contact" element={<Contact></Contact>}></Route>
-      <Route path="/about" element={<About></About>} ></Route>
+      <Route   path="/" element={<Home theme={theme}></Home>} ></Route>
+      <Route   path="/project" element={<Projects theme={theme}></Projects>}></Route>
+      <Route   path="/contact" element={<Contact theme={theme}></Contact>}></Route>
+      <Route   path="/about" element={<About theme={theme}></About>} ></Route>
     </Routes>
     </>
   )
