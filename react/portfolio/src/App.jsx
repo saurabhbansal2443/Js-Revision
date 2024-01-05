@@ -1,4 +1,4 @@
-import React from 'react';
+import React , {useState} from 'react';
 import Home from './Home';
 import Navbar from './Navbar';
 import About from './About';
@@ -6,10 +6,12 @@ import Contact from './Contact';
 import Projects from './Projects';
 import {Routes , Route } from "react-router-dom";
 
+
 const App = () => {
+  let [theme , setTheme ] = useState("light");
   return (
     <>
-    <Navbar></Navbar>
+    <Navbar themeObj = {{theme , setTheme }}></Navbar>
     <Routes>
       <Route path="/" element={<Home></Home>} ></Route>
       <Route path="/project" element={<Projects></Projects>}></Route>

@@ -5,13 +5,13 @@ const Home = () => {
   return (
     <div className='mainContainer'>
       <div className="textPart" style={{ fontSize: "2rem", fontWeight: "500" }}>
-        <main class="container" style={{ height: "25%" }}>
+        <main className="container" style={{ height: "25%" }}>
           <p>Hello 👋 I'm <br />
             Saurabh Bansal</p>
-          <section class="animation">
-            <div class="first"><div> Youtuber </div></div>
-            <div class="second"><div>Web Developer</div></div>
-            <div class="third"><div>Mentor </div></div>
+          <section className="animation">
+            <div className="first"><div> Youtuber </div></div>
+            <div className="second"><div>Web Developer</div></div>
+            <div className="third"><div>Mentor </div></div>
           </section>
         </main>
         <div className="aboutMe">
