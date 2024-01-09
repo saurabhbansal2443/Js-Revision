@@ -10,7 +10,7 @@ const Home = () => {
 
                 <MovieCard></MovieCard>
             </div>
-
+            
         </div>
     )
 }

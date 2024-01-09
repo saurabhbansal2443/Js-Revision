@@ -2,16 +2,21 @@ import React from 'react'
 
 const Navbar = () => {
   return (
-    <div >
-      <nav className="navbar  bg-body-tertiary">
-        <div className="container-fluid">
-          <a className="navbar-brand"> Movies </a>
-          <form className="d-flex" role="search">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button className="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </div>
-      </nav>
+   <div>
+   <div className="navbar bg-base-100 text-white">
+  <div className="flex-1">
+    <a className="btn btn-ghost text-xl text-white">Movie App </a>
+    <a className="btn btn-ghost text-xl text-white"> Favourite  </a>
+  </div>
+  <div className="flex gap-2 w-1/5">
+    <div className="form-control flex flex-row "  >
+      <input type="text" placeholder="Search" className="input input-bordered w-2/3 " />
+      <button className="btn btn-active btn-primary w-1/4 mx-3">Primary</button>
+    </div>
+   
+  </div>
+</div>
+
     </div>
   )
 }
