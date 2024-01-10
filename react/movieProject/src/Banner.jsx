@@ -37,8 +37,8 @@ const Banner = () => {
    
      
     return (
-       <div  className='text-2xl text-white  bg-no-repeat bg-cover' style={{ backgroundImage :`url(https://image.tmdb.org/t/p/w1280/${movieData[random].backdrop_path})` , height:"50vh"}}>
-            <h2 className='ml-4 text-6xl'> {movieData[random].title} </h2>
+       <div  className='text-2xl text-white  bg-no-repeat bg-cover flex flex-col align-bottom justify-end' style={{ backgroundImage :`url(https://image.tmdb.org/t/p/w1280/${movieData[random].backdrop_path})` , height:"70vh"}}>
+            <h2 className='ml-4 mb-8 text-6xl font-bold'> {movieData[random].title} </h2>
             <p className="ml-4 mb-8 text-4xl"> {movieData[random].overview} </p>
        </div>
     )
