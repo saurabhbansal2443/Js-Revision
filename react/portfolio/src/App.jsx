@@ -4,6 +4,7 @@ import Navbar from './Navbar';
 import About from './About';
 import Contact from './Contact';
 import Projects from './Projects';
+import Myid from './Myid';
 import {Routes , Route } from "react-router-dom";
 
 
@@ -17,6 +18,7 @@ const App = () => {
       <Route   path="/project" element={<Projects theme={theme}></Projects>}></Route>
       <Route   path="/contact" element={<Contact theme={theme}></Contact>}></Route>
       <Route   path="/about" element={<About theme={theme}></About>} ></Route>
+      <Route path="/about/:resID" element={<Myid></Myid>}></Route>
     </Routes>
     </>
   )

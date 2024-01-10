@@ -1,14 +1,15 @@
 import React from 'react'
 
-const MovieCard = () => {
+const MovieCard = ({obj}) => {
+  let imagePath = "https://image.tmdb.org/t/p/w1280/"
   return (
-    <div className="card card-compact w-96 bg-base-100 shadow-xl">
-  <figure><img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-  <div className="card-body">
-    <h2 className="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
+    <div className="card card-compact w-1/5 bg-base-100 shadow-xl">
+  <figure className='h-3/4' ><img  src={imagePath + obj.backdrop_path} alt="Shoes" /></figure>
+  <div className="card-body mx-0 text-white">
+    <h2 className="card-title">{obj.title}</h2>
+    <p>{obj.overview}</p>
     <div className="card-actions justify-end">
-      <button className="btn btn-primary">Buy Now</button>
+      <button className="btn btn-primary">Favourite</button>
     </div>
   </div>
 </div>
