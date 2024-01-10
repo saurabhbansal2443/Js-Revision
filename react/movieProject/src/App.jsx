@@ -3,6 +3,7 @@ import Navbar from './Navbar'
 import Home from './Home'
 import Favourite from './Favourite'
 import { Route , Routes } from 'react-router-dom'
+import MoviePage from './MoviePage'
 
 
 
@@ -14,6 +15,7 @@ const App = () => {
       <Routes>
     <Route path="/" element={<Home></Home>}></Route>
     <Route path="/favourite" element={<Favourite></Favourite>} ></Route>
+    <Route path="/movie/:movieID" element={<MoviePage></MoviePage>}></Route>
       </Routes>
      
     

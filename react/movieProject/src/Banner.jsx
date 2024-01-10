@@ -1,10 +1,45 @@
 import React from 'react'
+import { useState ,useEffect } from 'react';
+import Shimmer from './Shimmer';
 
 const Banner = () => {
+    let [movieData, setMovieData] = useState([]);
+    let [random , setRandom] = useState(0);
+
+    let getData = () => {
+
+        
+        const options = {
+            method: 'GET',
+            headers: {
+              accept: 'application/json',
+              Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyZTQzZGFmYmU3ZDU0NTQzZjJhMTQzZGY3MTIxNjYzZSIsInN1YiI6IjYyYjQ4YmE2YTU3ZDQzMDA1MTI5MDRmZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.no5qlG0nyulR_3EIOYkQtR2_a9MCjh83hBk_3zr6BPc'
+            }
+          };
+          
+          fetch('https://api.themoviedb.org/3/trending/movie/day?language=en-US', options)
+            .then(response => response.json())
+            .then(response => setMovieData(response.results))
+            .catch(err => console.error(err));
+        
+        
+    };
+
+    useEffect(() => {
+        getData();
+        let rn = Math.floor(Math.random()*10);
+        setRandom(rn);
+    }, [])
+
+      if(movieData.length == 0){
+         return <Shimmer></Shimmer>
+      }
+   
+     
     return (
-       <div style={{backgroundImage:"url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcmV2nrm2B-ta55cVsO_l4Kqe6LBOIVS3z2A&usqp=CAU')" , height:"50vh"}} className='text-white text-6xl flex flex-col justify-end item-start bg-no-repeat bg-cover bg-center  w-full h-full mb-6'>
-            <h2 className='ml-4'> Movie Name </h2>
-            <p className="ml-4 mb-8"> movie des </p>
+       <div  className='text-2xl text-white  bg-no-repeat bg-cover' style={{ backgroundImage :`url(https://image.tmdb.org/t/p/w1280/${movieData[random].backdrop_path})` , height:"50vh"}}>
+            <h2 className='ml-4 text-6xl'> {movieData[random].title} </h2>
+            <p className="ml-4 mb-8 text-4xl"> {movieData[random].overview} </p>
        </div>
     )
 }

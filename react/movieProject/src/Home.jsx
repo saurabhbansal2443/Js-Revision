@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Banner from './Banner'
 import MovieCard from './MovieCard'
 import Shimmer from './Shimmer'
+import { Link } from 'react-router-dom'
 
 
 const Home = () => {
@@ -9,7 +10,7 @@ const Home = () => {
 
     let getData = () => {
 
-        setTimeout((()=>{
+        
             const options = {
                 method: 'GET',
                 headers: {
@@ -22,7 +23,7 @@ const Home = () => {
                 .then(response => response.json())
                 .then(response => setMovieData(response.results))
                 .catch(err => console.error(err));
-        }),2000)
+        
         
     };
 
@@ -36,13 +37,17 @@ const Home = () => {
 
     return (
         <div >
-            <div className="banner max-h-screen-1/2">
+            <div className="banner min-h-screen-1/2">
                 <Banner></Banner>
             </div>
 
             <div className="flex justify-around flex-wrap min-h-screen-1/2">
-
-                <MovieCard obj={movieData[0]}></MovieCard>
+                {
+                    movieData.map((obj)=>{
+                        return <Link key={obj.id}  to={"/movie/" + obj.id}><MovieCard  obj={obj}></MovieCard></Link>
+                    })
+                
+            }
             </div>
 
        
