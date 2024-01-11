@@ -7,11 +7,13 @@ import { SearchContext } from './Search'
 
 
 const Home = () => {
-    let [movieData, setMovieData] = useState([]);
-    let [displayData , setDisplayData] = useState([]);
     let {q,o } = useContext(SearchContext);
+    let {setOgData ,ogData} = o ;
+    let [movieData, setMovieData] = useState(ogData);
+    let [displayData , setDisplayData] = useState([]);
+   
     let {query } = q;
-    let {setOgData} = o ;
+    
 
 
     // console.log("query from home " , query)
@@ -38,6 +40,7 @@ const Home = () => {
         fetch('https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc', options)
             .then(response => response.json())
             .then((response)=>{
+                console.log("Api called ")
                 setMovieData(response.results)
                 setDisplayData(response.results)
                 setOgData(response.results);
