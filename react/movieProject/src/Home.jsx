@@ -9,7 +9,10 @@ import { SearchContext } from './Search'
 const Home = () => {
     let [movieData, setMovieData] = useState([]);
     let [displayData , setDisplayData] = useState([]);
-    let {query } = useContext(SearchContext);
+    let {q,o } = useContext(SearchContext);
+    let {query } = q;
+    let {setOgData} = o ;
+
 
     // console.log("query from home " , query)
 
@@ -37,7 +40,7 @@ const Home = () => {
             .then((response)=>{
                 setMovieData(response.results)
                 setDisplayData(response.results)
-                console.log(setMovieData)
+                setOgData(response.results);
             }).catch(err => console.error(err));
     };
 

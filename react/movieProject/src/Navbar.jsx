@@ -5,7 +5,8 @@ import { SearchContext } from './Search';
 
 const Navbar = () => {
   let [input, setInput] = useState("");
- let {query,setQuery}= useContext(SearchContext);
+ let {q}= useContext(SearchContext);
+ let {query,setQuery} = q;
 
  console.log("query is " ,query);
 
