@@ -1,13 +1,25 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState ,useContext } from 'react'
 import Banner from './Banner'
 import MovieCard from './MovieCard'
 import Shimmer from './Shimmer'
 import { Link } from 'react-router-dom'
+import { SearchContext } from './Search'
 
 
 const Home = () => {
     let [movieData, setMovieData] = useState([]);
     let [displayData , setDisplayData] = useState([]);
+    let {query } = useContext(SearchContext);
+
+    // console.log("query from home " , query)
+
+    useEffect(()=>{
+        let filteredArray = movieData.filter((obj)=>{
+            return obj.title.toLowerCase().includes(query.toLowerCase())
+        })
+        setDisplayData(filteredArray);
+       
+    },[query])
 
     let getData = () => {
 
@@ -25,9 +37,8 @@ const Home = () => {
             .then((response)=>{
                 setMovieData(response.results)
                 setDisplayData(response.results)
+                console.log(setMovieData)
             }).catch(err => console.error(err));
-
-
     };
 
     useEffect(() => {
