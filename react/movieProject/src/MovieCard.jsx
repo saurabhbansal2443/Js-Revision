@@ -1,4 +1,4 @@
-import React , {useContext} from 'react';
+import React , {useContext , useState} from 'react';
 import { Link } from 'react-router-dom';
 import { SearchContext  } from './Search';
 
@@ -7,6 +7,8 @@ const MovieCard = ({ obj }) => {
   let imagePath = "https://image.tmdb.org/t/p/w1280/";
    let {f} = useContext(SearchContext);
    let {fav , setFav} = f;
+
+   console.log(fav);
 
   let handlefav = (id) => {
       if(fav.includes(id)){
@@ -27,7 +29,7 @@ const MovieCard = ({ obj }) => {
         <h2 className="card-title text-4xl">{obj.title}</h2>
         <p className='text-2xl'>{obj.overview}</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary text-2xl" onClick={()=>{handlefav(obj.id)}} > Add to favourite </button>
+          <button className="btn btn-primary text-2xl" onClick={()=>{handlefav(obj.id)}} > {fav.includes(obj.id)== false ?"Add to favourite" : "Remove from favourite"} </button>
         </div>
       </div>
     </div>
