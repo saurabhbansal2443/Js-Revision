@@ -111,7 +111,7 @@ const Home = () => {
             <div className="flex  justify-around flex-wrap min-h-screen-1/2">
                 {
                     displayData.map((obj) => {
-                        return <Link className='w-1/4 mx-5 my-5 ' key={obj.id} to={"/movie/" + obj.id}><MovieCard obj={obj}></MovieCard></Link>
+                        return <MovieCard  key={obj.id} obj={obj}></MovieCard>
                     })
 
                 }
