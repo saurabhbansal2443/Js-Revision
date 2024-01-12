@@ -1,46 +1,45 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import Favrow from './Favrow'
+import { SearchContext } from './Search'
 
 const Favourite = () => {
+  let { f, o } = useContext(SearchContext);
+  let { fav, setFav } = f;
+  let { ogData, setOgData } = o;
+  let [arr, setArr] = useState([]);
+
+  let getObjData = () => {
+    let objArray = []
+    for (let i = 0; i < fav.length; i++) {
+      let id = fav[i];
+      for (let j = 0; j < ogData.length; j++) {
+        if (id == ogData[j].id) {
+          objArray.push(ogData[j])
+          break;
+        }
+      }
+    }
+  }
+
+  
+
   return (
-    <div className='my-5 mx-5 h-screen w-full '>
+    <div className='my-5 mx-5 h-screen w-11/12 '>
       <div className="overflow-x-auto ">
         <table className="table">
-          {/* head */}
+
           <thead>
             <tr className='text-4xl'>
 
               <th>Movie Name</th>
               <th>Popularity </th>
-              <th>Rating</th>
+              <th className='flex justify-start'>  <svg height="42px" width="42px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 8L18 14H6L12 8Z"></path></svg>  Rating   <svg height="42px" width="42px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 16L6 10H18L12 16Z"></path></svg> </th>
             </tr>
           </thead>
-          <tbody className='text-2xl'>
-            {/* row 1 */}
-            <tr>
+          <tbody className='text-4xl'>
 
-              <td>
-                <div className="flex items-center gap-3">
-                  <div className="avatar">
-                    <div className="mask mask-squircle w-12 h-12">
-                      <img src="/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component" />
-                    </div>
-                  </div>
-                  <div>
-                    <div className="font-bold">Hart Hagerty</div>
-                    <div className="text-sm opacity-50">United States</div>
-                  </div>
-                </div>
-              </td>
-              <td>
-                Zemlak, Daniel and Leannon
-                <br />
-                <span className="badge badge-ghost badge-sm">Desktop Support Technician</span>
-              </td>
-              <td>Purple</td>
-              <th>
-                <button className="btn btn-outline btn-error text-2xl"> Remove from Favourite </button>
-              </th>
-            </tr>
+
+            {/* <Favrow></Favrow> */}
 
           </tbody>
 
