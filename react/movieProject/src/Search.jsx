@@ -6,7 +6,7 @@ export const SearchContext = createContext();
 const Search = ({children}) => {
   let [query , setQuery] = useState("");
   let [ogData ,setOgData] = useState([]);
-  console.log("ogData " ,ogData)
+  
   return (
    <SearchContext.Provider value={{q:{query, setQuery} , o :{ogData,setOgData}}}>{children}</SearchContext.Provider>
   )

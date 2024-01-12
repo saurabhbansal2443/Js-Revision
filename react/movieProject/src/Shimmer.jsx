@@ -2,9 +2,30 @@ import React from 'react'
 
 const Shimmer = () => {
   return (
-    <div className='h-screen w-full bg-slate-700 text-6xl'>
-    ShimmerUI
-</div>
+    <div className='min-h-screen  w-full text-6xl p-3'>
+      <div style={{ width: "97%", height: "65vh" }} className="artboard  bg-gray-200 mx-3  rounded-2xl"></div>
+      <div className="badges my-10 flex flex-row justify-around">
+        <button className="btn btn-wide bg-gray-200  text-4xl h-20" ></button>
+        <button className="btn btn-wide bg-gray-200 border-none text-4xl h-20"></button>
+        <button className="btn btn-wide bg-gray-200 border-none text-4xl h-20" > </button>
+        <button className="btn btn-wide bg-gray-200 border-none text-4xl h-20" > </button>
+        <button className="btn btn-wide bg-gray-200 border-none text-4xl h-20" ></button>
+
+      </div>
+      <div className="flex flex-wrap justify-around mt-5">
+        <div className="artboard bg-gray-200 mx-2 my-2 phone-1 rounded-2xl"></div>
+        <div className="artboard bg-gray-200 mx-2 my-2 phone-1 rounded-2xl"></div>
+        <div className="artboard bg-gray-200 mx-2 my-2 phone-1 rounded-2xl"></div>
+        <div className="artboard bg-gray-200 mx-2 my-2 phone-1 rounded-2xl"></div>
+        <div className="artboard bg-gray-200 mx-2 my-2 phone-1 rounded-2xl"></div>
+        <div className="artboard bg-gray-200 mx-2 my-2 phone-1 rounded-2xl"></div>
+        <div className="artboard bg-gray-200 mx-2 my-2 phone-1 rounded-2xl"></div>
+        <div className="artboard bg-gray-200 mx-2 my-2 phone-1 rounded-2xl"></div>
+        <div className="artboard bg-gray-200 mx-2 my-2 phone-1 rounded-2xl"></div>
+        <div className="artboard bg-gray-200 mx-2 my-2 phone-1 rounded-2xl"></div>
+
+      </div>
+    </div>
   )
 }
 

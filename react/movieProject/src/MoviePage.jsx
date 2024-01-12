@@ -20,8 +20,8 @@ const MoviePage = () => {
   return (
     <div className='text-3xl h-screen w-full flex justify-center items-center'>
       <div className="card card-side w-3/4 h-3/4 bg-base-100 shadow-xl">
-        <figure className='w-1/2 '><img className='h-full w-full' src={imagePath + obj.backdrop_path} alt="Movie" /></figure>
-        <div className="card-body px-7 py-12">
+        <figure className='w-3/4'><img className='h-full w-full' src={imagePath + obj.backdrop_path} alt="Movie" /></figure>
+        <div className="card-body w-1/4 px-7 py-12 overflow-auto">
           <h2 className="card-title text-white text-6xl">{obj.title}</h2>
           <p className='text-white text-3xl mt-7'>{obj.overview}</p>
 

@@ -23,6 +23,7 @@ const Home = () => {
             return obj.title.toLowerCase().includes(query.toLowerCase())
         })
         setDisplayData(filteredArray);
+        console.log(filteredArray)
        
     },[query])
 
@@ -37,10 +38,10 @@ const Home = () => {
             }
         };
 
-        fetch('https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc', options)
+        fetch('https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=4&sort_by=popularity.desc', options)
             .then(response => response.json())
             .then((response)=>{
-                console.log("Api called ")
+              
                 setMovieData(response.results)
                 setDisplayData(response.results)
                 setOgData(response.results);
@@ -88,7 +89,7 @@ const Home = () => {
         myfilter(abc);
     }
 
-    if (displayData.length == 0) {
+    if (movieData.length == 0) {
         return <Shimmer></Shimmer>
     }
 
