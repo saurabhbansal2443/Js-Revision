@@ -5,6 +5,7 @@ const Favrow = ({obj}) => {
 
     let {f} = useContext(SearchContext);
     let {fav ,setFav} = f;
+    let imagePath = "https://image.tmdb.org/t/p/w1280/";
 
     let handleClick=(id)=>{
         let updatedArray = fav.filter((ele)=>{
@@ -20,7 +21,7 @@ const Favrow = ({obj}) => {
             <div className="avatar">
               <div className="mask mask-squircle w-12 h-12">
                 <img
-                  src="/tailwind-css-component-profile-2@56w.png"
+                  src={imagePath + obj.backdrop_path}
                   alt="movie poster "
                 />
               </div>

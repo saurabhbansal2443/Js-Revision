@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect , useState } from 'react'
 import Favrow from './Favrow'
 import { SearchContext } from './Search'
 
@@ -19,9 +19,18 @@ const Favourite = () => {
         }
       }
     }
+    setArr(objArray);
   }
 
-  
+  let sortTheRating = (a)=>{
+    
+  }
+
+  useEffect(()=>{
+    getObjData();
+  },[fav])
+
+
 
   return (
     <div className='my-5 mx-5 h-screen w-11/12 '>
@@ -33,13 +42,13 @@ const Favourite = () => {
 
               <th>Movie Name</th>
               <th>Popularity </th>
-              <th className='flex justify-start'>  <svg height="42px" width="42px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 8L18 14H6L12 8Z"></path></svg>  Rating   <svg height="42px" width="42px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 16L6 10H18L12 16Z"></path></svg> </th>
+              <th className='flex justify-start'>  <svg onClick={()=>{sortTheRating("a")}} height="42px" width="42px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 8L18 14H6L12 8Z"></path></svg>  Rating   <svg onClick={()=>{sortTheRating("d")}} height="42px" width="42px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 16L6 10H18L12 16Z"></path></svg> </th>
             </tr>
           </thead>
           <tbody className='text-4xl'>
 
 
-            {/* <Favrow></Favrow> */}
+            { arr.map((obj)=>   <Favrow key={obj.id} obj={obj}></Favrow>)}
 
           </tbody>
 
