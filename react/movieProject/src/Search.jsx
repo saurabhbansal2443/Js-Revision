@@ -13,4 +13,4 @@ const Search = ({children}) => {
   )
 }
 
-export default Search
+export default (Search)

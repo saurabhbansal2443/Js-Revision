@@ -1,18 +1,32 @@
-import React from 'react'
-
-let reactEle = React.createElement("h1",{},"i am created through react");
-let sum = 1+2 ;
-let jsxElement =  <h1 className = "head"> <img/> {3  + 12 } { 3 -1 }</h1>;
-
-
-const Comp = ()=>{
-  return <h1> I am h1 </h1>
-}
+import React, { useState, useReducer } from 'react'
+import Navbar from "./Navbar"
+import Wrapper from './Wrapper';
 
 const App = () => {
+  // let [state , setState ] = useState(0);
+  let intialState = 99;
+
+  let reducer = (state, action) => {
+    if (action.type == "INC") {
+      return state + action.payload;
+    } else if (action.type == "DEC") {
+      return state - 1;
+    } else {
+      return state;
+    }
+
+  }
+  let [state2, dispatch] = useReducer(reducer, intialState);
+  
+
   return (
     <div>
-     <Comp/>
+      <Wrapper element={Navbar} color={"red"}></Wrapper>
+      <Wrapper element={Navbar} color={"yellow"}></Wrapper>
+      <Wrapper element={Navbar} color={"green"}></Wrapper>
+      <h1> {state2}</h1>
+      <button onClick={() => { dispatch({ type: "INC" , payload : 20  }) }}>INCREMENT </button>
+      <button onClick={() => { dispatch({ type: "DEC" }) }}>DECREMENT </button>
     </div>
   )
 }

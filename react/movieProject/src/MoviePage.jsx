@@ -6,7 +6,7 @@ import { useContext } from 'react';
 const MoviePage = () => {
     let [obj ,setObj ] = useState({});
   let { o } = useContext(SearchContext);
-  console.log("movie page ", o);
+  
   let { movieID } = useParams();
 
   useEffect(()=>{
@@ -14,7 +14,7 @@ const MoviePage = () => {
         return obj.id == movieID;
     })
     setObj(targetObj[0]);
-    console.log(targetObj[0])
+    
   },[])
   let imagePath = "https://image.tmdb.org/t/p/w1280/"
   return (

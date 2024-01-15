@@ -8,7 +8,7 @@ const MovieCard = ({ obj }) => {
    let {f} = useContext(SearchContext);
    let {fav , setFav} = f;
 
-   console.log(fav);
+   
 
   let handlefav = (id) => {
       if(fav.includes(id)){
@@ -22,6 +22,7 @@ const MovieCard = ({ obj }) => {
         setFav(updatedArray);
       }
   }
+  console.log("card rendered");
   return (
     <div className="card card-compact w-1/4 bg-base-100 shadow-xl mx-3 my-3   min-h-full overflow-auto hover:scale-110 transition duration-500 cursor-pointer">
       <figure  ><Link to={"/movie/" + obj.id} ><img className='h-full' src={imagePath + obj.backdrop_path} alt="Shoes" /> </Link> </figure>
@@ -36,4 +37,4 @@ const MovieCard = ({ obj }) => {
   )
 }
 
-export default MovieCard
+export default (MovieCard)
