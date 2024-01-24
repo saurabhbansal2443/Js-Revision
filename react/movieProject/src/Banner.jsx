@@ -27,7 +27,7 @@ const Banner = () => {
 
     useEffect(() => {
         getData();
-        let rn = Math.floor(Math.random()*10);
+        let rn = Math.floor(Math.random()*15);
         setRandom(rn);
     }, [])
 
